@@ -47,14 +47,16 @@
   
                   if (un==null || un==""){  
                     alert("Enter the email");
-                    document.form1.email.focus();  
+                    document.mform.email.focus();  
                              return false;  
                        }
-                       else if(pass.length<8){  
-                      alert("Password must be at least 8 characters long.");  
-                     return false;  
+                  if(pass <8 ){  
+                      alert("Password must be at least 8 characters long."); 
+                      document.mform.email.value="";
+                      document.mform.email.focus(); 
+                          return false;  
                      }
-                   return true;
+                     return true;  
                   }  
      </script>
 </body>
